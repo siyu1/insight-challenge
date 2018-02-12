@@ -10,9 +10,9 @@ According to the requirement of the challenge, "percentile.txt" and "itcont.txt"
 
 # library used
 
-import pandas as pd
-import numpy as np
-import math
-import os
+1. pandas
+2. numpy
+3. os
+4. math
 
 

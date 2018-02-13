@@ -10,6 +10,7 @@ import pandas as pd
 import numpy as np
 import math
 import os
+from os.path import dirname, abspath
 
 # get the parent folder and generate input/output directory
 dir = dirname(dirname(abspath(__file__)))

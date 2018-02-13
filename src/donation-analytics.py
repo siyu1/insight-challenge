@@ -14,20 +14,19 @@ import os
 # get the parent folder and generate input/output directory
 os.getcwd()
 os.chdir('..')
-dir = os.getcwd().replace('\\','/') 
 
-input_percentile=[dir,'/input/percentile.txt']
-Percentile_Tag=''.join(map(str,input_percentile))
+
+Percentile_Tag=os.path.join(os.getcwd(),"input","percentile.txt")
 f1 = open(Percentile_Tag, 'r')
 percentile=int(f1.read())
 
-output_file=[dir,'/output/repeat_donors.txt']
-output_Tag=''.join(map(str,output_file))
+
+output_Tag=os.path.join(os.getcwd(),"output","repeat_donors.txt")
 f = open(output_Tag, 'w')
 f.close()
 
-input_itcont=[dir,'/input/itcont.txt']
-itcont_Tag=''.join(map(str,input_itcont))
+
+itcont_Tag=os.path.join(os.getcwd(),"input","itcont.txt")
 f2 = open(itcont_Tag, 'r')
 
 

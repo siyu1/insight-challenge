@@ -49,7 +49,7 @@ for chunk in pd.read_csv(f2,sep="|", header=None, converters={10: lambda x: str(
     
         chunk = chunk[pd.notnull(chunk['TRANSACTION_AMT'])]
     
-        if len(chunk)>0: # check whether the imported data is valid
+        if len(chunk)>0 and np.issubdtype(chunk['TRANSACTION_AMT'].dtype, np.number): # check whether the imported data is valid, whether transaction amount is numeric value
             
             chunk['ZIP_CODE'] = chunk['ZIP_CODE'].astype('str').str[0:5] # get the first 6 digits
             chunk['TRANSACTION_DT']=chunk['TRANSACTION_DT'].astype('str').str[-4:]

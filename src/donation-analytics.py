@@ -12,21 +12,21 @@ import math
 import os
 
 # get the parent folder and generate input/output directory
-os.getcwd()
-os.chdir('..')
+dir = dirname(dirname(abspath(__file__)))
 
 
-Percentile_Tag=os.path.join(os.getcwd(),"input","percentile.txt")
+
+Percentile_Tag=os.path.join(dir,"input","percentile.txt")
 f1 = open(Percentile_Tag, 'r')
 percentile=int(f1.read())
 
 
-output_Tag=os.path.join(os.getcwd(),"output","repeat_donors.txt")
+output_Tag=os.path.join(dir,"output","repeat_donors.txt")
 f = open(output_Tag, 'w')
 f.close()
 
 
-itcont_Tag=os.path.join(os.getcwd(),"input","itcont.txt")
+itcont_Tag=os.path.join(dir,"input","itcont.txt")
 f2 = open(itcont_Tag, 'r')
 
 
